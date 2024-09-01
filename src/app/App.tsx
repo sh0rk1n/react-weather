@@ -1,8 +1,13 @@
 import React from 'react';
+import { MainPage } from '../pages/MainPage';
+import IPInfo from 'ip-info-react';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <IPInfo>
+      <MainPage />
+    </IPInfo>
+  );
 }
 
-// @ts-ignore
 export default App;

@@ -43,7 +43,11 @@
     ]
   },
   "devDependencies": {
+    "axios": "^1.7.7",
+    "ip-info-react": "^1.0.0",
     "prettier": "^3.3.3",
+    "sass": "^1.77.8",
+    "scss": "^0.2.4",
     "stylelint": "^16.9.0",
     "stylelint-config-standard": "^36.0.1",
     "stylelint-config-standard-scss": "^13.1.0"
