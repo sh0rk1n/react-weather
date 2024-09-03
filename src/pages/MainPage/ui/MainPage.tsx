@@ -12,7 +12,7 @@ import {
   setVisibility,
   setWindSpeed,
 } from '../model/slices/weatherSlice';
-import WeatherIcons from '../../../components/WeatherIcons/ui/WeatherIcons';
+import WeatherIcons from '../../../widgets/weather/WeatherIcons';
 import { useAppSelector } from '../../../shared/lib/hooks/useAppSelector/useAppSelector';
 import { useAppDispatch } from '../../../shared/lib/hooks/useAppDispatch/useAppDispatch';
 import Weather from '../../../widgets/weather/Weather';

@@ -4,6 +4,14 @@ import { useAppSelector } from '../../shared/lib/hooks/useAppSelector/useAppSele
 const Weather = ({ isOpen, city, date }) => {
   const { temp, descr, tempFeels, visibility, windSpeed, humidity } =
     useAppSelector((state) => state.main);
+
+  const weatherStats = [
+    { title: 'Видимость', specific: `${visibility} км` },
+    { title: 'Ощущается', specific: `${tempFeels / 10}°` },
+    { title: 'Влажность', specific: `${humidity} %` },
+    { title: 'Ветер', specific: `${windSpeed} м/с` },
+  ];
+
   return (
     <main className="container main">
       <div className="widget">
@@ -44,22 +52,12 @@ const Weather = ({ isOpen, city, date }) => {
             isOpen ? 'widget__stats' : 'widget__stats widget__stats_over'
           }
         >
-          <li className="widget__stats-item">
-            <div className="widget__stats-text">Видимость</div>
-            <div className="widget__stats-range">{visibility} км</div>
-          </li>
-          <li className="widget__stats-item">
-            <div className="widget__stats-text">Ощущается</div>
-            <div className="widget__stats-range">{tempFeels / 10}&#176;</div>
-          </li>
-          <li className="widget__stats-item">
-            <div className="widget__stats-text">Влажность</div>
-            <div className="widget__stats-range">{humidity} %</div>
-          </li>
-          <li className="widget__stats-item">
-            <div className="widget__stats-text">Ветер</div>
-            <div className="widget__stats-range">{windSpeed} м/с</div>
-          </li>
+          {weatherStats.map((item, index) => (
+            <li className="widget__stats-item" key={index}>
+              <div className="widget__stats-text">{item.title}</div>
+              <div className="widget__stats-range">{item.specific}</div>
+            </li>
+          ))}
         </ul>
       </div>
     </main>
