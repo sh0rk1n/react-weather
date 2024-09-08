@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from 'src/shared/assets/logo.svg';
+import logo from 'shared/assets/logo.svg';
 
 const Header = ({ isOpen }) => {
   return (

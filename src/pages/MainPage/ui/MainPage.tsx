@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from 'react';
 import { IPInfoContext } from 'ip-info-react';
 import axios from 'axios';
-import { useAppSelector } from 'src/shared/lib/hooks/useAppSelector/useAppSelector';
-import { useAppDispatch } from 'src/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { useAppSelector } from 'shared/lib/hooks/useAppSelector/useAppSelector';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
   setDescr,
   setHumidity,
@@ -12,10 +12,10 @@ import {
   setVisibility,
   setWindSpeed,
 } from '../model/slices/weatherSlice';
-import Header from 'src/widgets/header/Header';
-import Footer from 'src/widgets/footer/Footer';
-import WeatherIcons from 'src/widgets/weather/WeatherIcons';
-import Weather from 'src/widgets/weather/Weather';
+import Header from 'widgets/header/Header';
+import Footer from 'widgets/footer/Footer';
+import WeatherIcons from 'widgets/weather/WeatherIcons';
+import Weather from 'widgets/weather/Weather';
 
 const MainPage = () => {
   const userInfo = useContext(IPInfoContext);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppSelector } from 'src/shared/lib/hooks/useAppSelector/useAppSelector';
+import { useAppSelector } from 'shared/lib/hooks/useAppSelector/useAppSelector';
 
 const Weather = ({ isOpen, city, date }) => {
   const { temp, descr, tempFeels, visibility, windSpeed, humidity } =
