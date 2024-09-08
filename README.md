@@ -1,3 +1,5 @@
 # React Weather
-## 2 месяца отдыхал, поэтому начал с простенького!
-### Переделал под свой лад [этот проект](https://github.com/YozieB/weather-react) + пофиксил косяки / отрефакторил немного
+## Посмотреть: https://sh0rk1n.github.io/react-weather/
+
+### API иногда помирает, поэтому может не показывать погоду.
+##### [Взял отсюда верстку](https://github.com/YozieB/weather-react)
