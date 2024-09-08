@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from 'react';
 import { IPInfoContext } from 'ip-info-react';
 import axios from 'axios';
-import Header from '../../../widgets/header/Header';
-import Footer from '../../../widgets/footer/Footer';
+import { useAppSelector } from 'src/shared/lib/hooks/useAppSelector/useAppSelector';
+import { useAppDispatch } from 'src/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
   setDescr,
   setHumidity,
@@ -12,10 +12,10 @@ import {
   setVisibility,
   setWindSpeed,
 } from '../model/slices/weatherSlice';
-import WeatherIcons from '../../../widgets/weather/WeatherIcons';
-import { useAppSelector } from '../../../shared/lib/hooks/useAppSelector/useAppSelector';
-import { useAppDispatch } from '../../../shared/lib/hooks/useAppDispatch/useAppDispatch';
-import Weather from '../../../widgets/weather/Weather';
+import Header from 'src/widgets/header/Header';
+import Footer from 'src/widgets/footer/Footer';
+import WeatherIcons from 'src/widgets/weather/WeatherIcons';
+import Weather from 'src/widgets/weather/Weather';
 
 const MainPage = () => {
   const userInfo = useContext(IPInfoContext);
@@ -23,7 +23,7 @@ const MainPage = () => {
   const { isOpen } = useAppSelector((state) => state.main);
   const now = new Date();
   const date = now.toLocaleDateString();
-  const city = userInfo.city; // из за того что fetchData асинхронна, получаем ошибку в первый раз
+  const city = userInfo.city;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -50,11 +50,11 @@ const MainPage = () => {
   }, [city]);
 
   return (
-    <div className="page">
+    <>
       <Header isOpen={isOpen} />
       <Weather isOpen={isOpen} city={city} date={date} />
       <Footer isOpen={isOpen} />
-    </div>
+    </>
   );
 };
 

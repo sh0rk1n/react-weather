@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import { store } from './providers/StoreProvider';
 
 function App() {
+  document.body.classList.add('page');
+
   return (
     <Provider store={store}>
       <IPInfo>

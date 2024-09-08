@@ -1,15 +1,15 @@
 import React from 'react';
-import { useAppSelector } from '../../shared/lib/hooks/useAppSelector/useAppSelector';
+import { useAppSelector } from 'src/shared/lib/hooks/useAppSelector/useAppSelector';
 
 const Weather = ({ isOpen, city, date }) => {
   const { temp, descr, tempFeels, visibility, windSpeed, humidity } =
     useAppSelector((state) => state.main);
 
   const weatherStats = [
-    { title: 'Видимость', specific: `${visibility} км` },
-    { title: 'Ощущается', specific: `${tempFeels / 10}°` },
-    { title: 'Влажность', specific: `${humidity} %` },
-    { title: 'Ветер', specific: `${windSpeed} м/с` },
+    { title: 'Visibility', specific: `${visibility} km` },
+    { title: 'Feels like', specific: `${tempFeels / 10}°` },
+    { title: 'Humidity', specific: `${humidity} %` },
+    { title: 'Wind', specific: `${windSpeed} m/c` },
   ];
 
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import heartPath from '../../shared/assets/heart.svg';
+import heartPath from 'src/shared/assets/heart.svg';
 
 const Footer = ({ isOpen }) => {
   return (

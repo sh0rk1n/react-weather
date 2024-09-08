@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { mainReducer } from '../../../../pages/MainPage';
+import { mainReducer } from 'src/pages/MainPage';
 
 const rootReducer = combineReducers({
   main: mainReducer,
